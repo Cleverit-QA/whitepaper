@@ -4,4 +4,4 @@
 
 * link:master.html?e=modules/ROOT/pages//release-notes.adoc[Release Notes]
 
-NOTE: This page is a live rendering of the user-documentation repo. The link:https://Cleverit-QA.github.io/user-docs-site/[main doc site] contains current and previous versions.
+NOTE: This page is a live rendering of the user-documentation repo. The link:https://cleverit-qa.github.io/whitepaper/[main doc site] contains current and previous versions.
