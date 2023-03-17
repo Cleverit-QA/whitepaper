@@ -1,0 +1,180 @@
+// Metadata created by nebel
+//
+// QuickstartID:
+// Level: 1
+// ParentAssemblies: generated-master.adoc
+// UserStory:
+// VerifiedInVersion:
+:context: release-notes
+
+:PRODUCT: Red Hat Managed Integration
+:ProductName: {PRODUCT}
+:PRODUCT_SHORT: Managed Integration
+:PRODUCT_INIT: rhmi
+:PRODUCT_INIT_CAP: RHMI
+
+:imagesdir: _images
+
+:PRODUCT_VERSION: 2
+:ProductRelease: {PRODUCT_VERSION}
+:MINOR_VERSION_NO: 2.1
+:PATCH_VERSION_NO: 2.1.0
+
+:cluster-suffix: <cluster-suffix>
+:suffix-example: example.u7y2.s1.openshift.com
+
+:URL_COMPONENT_PRODUCT: red_hat_managed_integration
+:URL_BASE: https://access.redhat.com/documentation/en-us/red_hat_managed_integration/2/html-single
+
+:URL_BASE_GITHUB: https://github.com/integr8ly/user-documentation
+
+:webapp: Solution Explorer
+:walkthrough-name: Solution Pattern
+:solution-name: cloud-native, integrated applications
+
+:cluster-administrator: cluster administrator
+:cluster-developer: developer
+
+:unifiedpush-service: Push Notifications
+:customer-sso-name: Customer Application SSO instance
+:rhsso-name: Red Hat Single Sign-On
+:rhsso-short-name: RH SSO
+
+:openshift-client-url: https://access.redhat.com/downloads/content/290/ver=4.3/rhel---8/4.3.5/x86_64/product-software
+
+:fuse-name: Red Hat Fuse Online
+:fuse-version: 7.6
+:fuse-docs: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/
+:fuse-configs: https://access.redhat.com/articles/310603
+:fuse-short-name: Fuse Online
+
+:amq-online-name: Red Hat AMQ Online
+:amq-online-version: 1.4
+:amq-online-docs: https://access.redhat.com/documentation/en-us/red_hat_amq/
+:amq-online-configs: https://access.redhat.com/articles/2791941
+
+:three-scale-name: Red Hat 3scale API Management
+:three-scale-version: 2.8
+:three-scale-docs: https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/
+:three-scale-configs: https://access.redhat.com/articles/2798521
+:three-scale-service-discovery: https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/html/admin_portal_guide/service-discovery
+
+:code-ready-name: Red Hat CodeReady Workspaces
+:code-ready-version: 2.0
+:code-ready-docs: https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/
+:code-ready-configs: N/A
+:codeready-workspaces-url: https://codeready-redhat-rhmi-codeready-workspaces.apps.{cluster-suffix}
+:code-ready-short: CodeReady Workspaces
+
+:rhsso-version: 7.3
+
+:project-note: pass:quotes[Projects starting with `redhat-`, `openshift-` and `kube` host cluster components that run as Pods and other infrastructure components. Do not create projects starting with these strings.]
+
+:refresh-note: pass:quotes[To see your changes in Solution Explorer, refresh Solution explorer by clicking the gear icon followed by *Save*.]
+
+
+
+[id="release-notes"]
+= Release Notes for {PRODUCT} {PRODUCT_VERSION}
+//If the assembly covers a task, start the title with a verb in the gerund form, such as Creating or Configuring.
+
+//INCLUDES
+
+:leveloffset: +1
+
+[id="new-changed"]
+= Key features
+
+{PRODUCT} is a platform for developing and deploying enterprise integration solutions.
+It is hosted and managed by Red Hat so you can focus on building applications, not infrastructure.
+{PRODUCT_SHORT} enables your team to develop, build, and deploy enterprise integration solutions on an OpenShift Dedicated cluster managed by Red Hat
+
+*Services:* Integration capabilities and services which are fully hosted and managed integration components that are pre-installed and pre-configured on an OpenShift Dedicated cluster. The products available as services are:
+
+* API management ({three-scale-name})
+* Enterprise connectivity ({fuse-short-name})
+* Messaging ({amq-online-name})
+* Single sign-on ({rhsso-name})
+* Integrated development environment ({code-ready-name})
+
+*Solution Patterns:* Pre-developed Solution Patterns demonstrate best practices and help development teams get started quickly. You can create additional Solution Patterns to standardize best practices.
+
+*Solution Explorer:* A unified front-end web application that provides access to the installed products, development tools, Solution Patterns, and the Red Hat OpenShift console.
+
+Technical preview features are not enabled by default in {PRODUCT} clusters. For example, the Internet of Things (IoT) feature of AMQ Online is not enabled. Any exceptions are labeled in the Solution Explorer.
+
+:leveloffset!:
+
+:leveloffset: +1
+
+[id="known-issues"]
+= Known issues
+
+This section lists known issues with Red Hat Managed Integration {PRODUCT_VERSION}:
+
+* There is an intermittent issue where you are redirected to the login page when logging into the {unifiedpush-service} or {fuse-name}. To work around this issue, clear the cookies in your browser.
+* Service Discovery as described in the link:{three-scale-service-discovery}[3scale documentation] does not work in {PRODUCT} {PRODUCT_VERSION}.
+* If you log into the OpenShift console as a {cluster-developer} and then switch to the Developer perspective, you get a "Restricted Access" error. To work around this issue, select a project from the project drop-down menu.
+* There is an intermittent issue where logging out of the {webapp} allows you to log back in again without requiring login credentials.
+* If email addresses are not available as part of your IdP configuration, you cannot receive 3scale email notifications.
+To work around this issue, you must:
+1. Log in to 3scale from the {webapp}.
+2. Access the *Settings* menu by clicking the gear icon.
+3. Enter your email address in the *USER INFORMATION* section.
+4. Click *Update Details*.
+* The following Solution Patterns are not available in this release:
++
+--
+** _3 - Low-code API development and SaaS integration._
+** _4 - Protecting APIs using 3scale API Management Platform._
+--
++
+Ignore references to these Solution Patterns in the documentation.
+
+:leveloffset!:
+
+:leveloffset: +1
+
+// Metadata created by nebel
+//
+// QuickstartID:
+// Level: 2
+// ParentAssemblies: assemblies/release-notes/as_release-notes.adoc
+// UserStory:
+// VerifiedInVersion:
+
+[id="versions"]
+= Versions of components
+//In the title of a reference module, include nouns that are used in the body text. For example, "Keyboard shortcuts for ___" or "Command options for ___." This helps readers and search engines find the information quickly.
+
+{PRODUCT} includes the following software versions.
+
+[cols="h,"]
+|===
+
+|Component
+|*Documentation*
+
+|{fuse-name}
+|link:{fuse-docs}[{fuse-version}] +
+(Click Fuse Online Category)
+
+|{amq-online-name}
+|link:https://access.redhat.com/documentation/en-us/red_hat_amq/[{amq-online-version}] +
+(Click AMQ Online Category)
+
+|{three-scale-name}
+|link:{three-scale-docs}[{three-scale-version}]
+
+|{code-ready-name}
+|link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/[{code-ready-version}]
+
+|Red Hat Single Sign-On
+|https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/{rhsso-version}/[{rhsso-version}]
+
+
+|===
+
+The documentation listed above assumes that you intend to install and configure the component on OpenShift Container Platform. With {PRODUCT}, the installation and configuration documentation is not relevant and should be ignored.
+
+:leveloffset!:
