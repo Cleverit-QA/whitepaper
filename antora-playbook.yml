@@ -2,7 +2,7 @@ site:
   title: Antora Demo Site
   # the 404 page and sitemap files only get generated when the url property is set
   url: https://cleverit-qa.github.io/whitepaper/
-  start_page: component-b::index.adoc
+  start_page: ROOT::inline-text-formatting.adoc
 content:
   sources:
   - url: https://gitlab.com/antora/demo/demo-component-a.git
