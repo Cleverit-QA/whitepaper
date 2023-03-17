@@ -1,7 +1,0 @@
-= User Documentation on master branch
-
-* link:master.html?e=modules/ROOT/pages//getting-started.adoc[Getting Started]
-
-* link:master.html?e=modules/ROOT/pages//release-notes.adoc[Release Notes]
-
-NOTE: This page is a live rendering of the user-documentation repo. The link:https://cleverit-qa.github.io/whitepaper/[main doc site] contains current and previous versions.

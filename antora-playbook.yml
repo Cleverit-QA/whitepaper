@@ -1,9 +1,0 @@
-site:
-  title: Integreatly Docs Site
-  # the 404 page and sitemap files only get generated when the url property is set
-  url: https://cleverit-qa.github.io/whitepaper/
-  start_page: integreatly::index.adoc
-content:
-  sources:
-  - url: .
-    branches: main
