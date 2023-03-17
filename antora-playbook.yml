@@ -6,9 +6,4 @@ site:
 content:
   sources:
   - url: .
-    branches: HEAD
-
-ui:
-  bundle:
-    url: ./ui-bundle.zip
-    snapshot: true
+    branches: main
